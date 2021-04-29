@@ -58,7 +58,8 @@
     "format:eslint": "eslint --ext .js,.html src/ --fix",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
-    "setup": "npm install && npm run validate"
+    "setup": "npm install && npm run validate",
+    "sass": "sass --style=compressed src/styles/algawolf/index.scss src/styles/algawolf.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -68,7 +69,7 @@
     "@snowpack/plugin-run-script": "^2.3.0",
     "@tailwindcss/jit": "^0.1.8",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.4",
+    "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.16.3",
     "cross-env": "^7.0.3",
@@ -80,7 +81,7 @@
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
@@ -90,10 +91,13 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.1.1",
     "workbox-cli": "^6.1.1"
   },
   "dependencies": {
-    "alpinejs": "^2.8.2"
+    "@ryangjchandler/spruce": "^2.6.3",
+    "alpinejs": "^2.8.2",
+    "animejs": "^3.2.1",
+    "sass": "^1.32.8"
   }
 }

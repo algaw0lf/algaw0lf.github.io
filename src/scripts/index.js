@@ -1,4 +1,7 @@
 import 'alpinejs';
+import '@ryangjchandler/spruce';
+import './modules/prism';
+import 'animejs';
 
 const env = document.querySelector('body').dataset.env;
 
