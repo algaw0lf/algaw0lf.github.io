@@ -11,19 +11,58 @@ module.exports = {
         'landscape': { 'raw': '(orientation: landscape)' },
       },
       colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
         black: '#111111',
-        white: '#fefefe'
+        white: '#fefefe',
+        primary: {
+          50: '#f6f8f8',
+          100: '#eaf0f2',
+          200: '#cee6ec',
+          300: '#9bdaec',
+          400: '#2bc0e6',
+          500: '#0487b3',
+          600: '#005d7f',
+          700: '#00435b',
+          800: '#002431',
+          900: '#00151c'
+        },
+        secondary: {
+          50: '#f9f7f7',
+          100: '#f2eaea',
+          200: '#eccdcc',
+          300: '#ec9f9d',
+          400: '#ff322c',
+          500: '#fe0a08',
+          600: '#cb0101',
+          700: '#a60000',
+          800: '#3a0000',
+          900: '#150000'
+        }, 
+        gray: {
+          50: '#f9fbfb',
+          100: '#f3f3f6',
+          200: '#e5e8eb',
+          300: '#d1d6db',
+          400: '#9ca5af',
+          500: '#6b7380',
+          600: '#4b5863',
+          700: '#374451',
+          800: '#1f2c37',
+          900: '#111a27'
+        }
       },
       fontFamily: {
         sans: [
+          // 'Arial',
           'IBM Plex Sans',
         ],
         serif: [
-          'IBM Plex Serif',
+          'PT Serif',
         ],
         mono: [
-          // 'DM Mono',
-          'IBM Plex Mono',
+          // 'PT Serif',
+          'IBM Plex Mono'
         ],
       },
       spacing: {
@@ -60,6 +99,7 @@ module.exports = {
         '64': '22.173rem',
         '128': '35.8759rem',
         '256': '58.0472rem',
+        '508': ''
       },
       fontSize: {
         xxs: '0.7683rem',
@@ -126,6 +166,21 @@ module.exports = {
         '80': '.8',
         '90': '.9',
         '100': '1',
+      },
+      scale: {
+        '0': '0',
+       '25': '.25',
+        '50': '.5',
+        '66': '.66',
+        '75': '.75',
+        '90': '.9',
+       '95': '.95',
+        '100': '1',
+       '105': '1.05',
+       '110': '1.1',
+        '125': '1.25',
+        '150': '1.5',
+       '200': '2',
       }
     },
   },

@@ -1,15 +1,19 @@
 .button {
-  @apply inline-block text-sm px-4 py-3 rounded font-black uppercase tracking-wide bg-indigo-500 text-white;
+  @apply inline-block text-sm px-4 py-3 font-black uppercase tracking-wide bg-primary-500 text-white;
 }
 
-.gradient-purple {
-  @apply bg-gradient-to-r from-indigo-500 via-indigo-700 to-indigo-900;
+.gradient-primary {
+  @apply bg-gradient-to-r from-white via-gray-100 to-gray-100;
 }
 
 .input {
-  @apply rounded border-gray-300 text-gray-900 focus:border-indigo-500;
+  @apply border-gray-300 text-gray-900 focus:border-gray-500;
 }
 
 .section-spacing {
   @apply py-8 md:py-16 lg:py-24;
+}
+
+.mod-drop-shadow {
+  filter: drop-shadow(17px 11px 25px #0000004a);
 }

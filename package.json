@@ -1,6 +1,6 @@
 {
-  "name": "my-website",
-  "author": "Matt Waler",
+  "name": "algawolf",
+  "author": "Aeron Miles",
   "license": "UNLICENSED",
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
@@ -9,7 +9,7 @@
     "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development npm-run-all -p dev:*",
     "dev:11ty": "eleventy --serve --quiet",
-    "dev:webpack": "webpack --watch"
+    "dev:webpack": "webpack"
   },
   "prettier": {
     "semi": false,
