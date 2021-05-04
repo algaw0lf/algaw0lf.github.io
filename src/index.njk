@@ -5,7 +5,6 @@
 
 {% block body %}
 
-  {# Success Contact Submit #}
   <script>
     function contactSubmit() {
       return {
@@ -40,7 +39,7 @@
     })(); #}
   </script>
 
-  <section
+  {# <section
     x-data="contactSubmit()"
     x-init="init()"
     x-cloak
@@ -56,21 +55,19 @@
         <p class="mt-2 text-sm">Thank you for reaching out.<br>I will be in touch.</p>
       </div>
     </div>
-  </section>
+  </section> #}
 
   {# Hero #}
   <div class="text-center py-8">
     <h1>
         VCV Rack Modules
       </h1>
-    <p class="text-gray-700 mt-2 m-auto text-base tracking-wide3">Polyphonic & Mono IO & CV - Guided Randomness - Optimized Performance</p>
+    <p class="text-gray-700 mt-2 m-auto text-sm tracking-wide3">Polyphonic & Mono IO & CV - Guided Randomness - Optimized Performance</p>
   </div>
 
   {% include "vcv-modules.njk" %}
 
-  {# What I Do #}
   <section class="relative section-spacing">
-    {# Content #}
     <div class="container text-center">
       <div class="mt-12 grid gap-12 sm:gap-16 sm:mt-24 sm:grid-cols-3 lg:gap-24">
         {% for skill in skills %}
@@ -93,9 +90,8 @@
         {% endfor %}
       </div>
     </div>
-
   </section>
 
-  {% include 'contact-cta.njk' %}
+  {# {% include 'contact-cta.njk' %} #}
 
 {% endblock %}
