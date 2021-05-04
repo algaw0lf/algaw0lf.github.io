@@ -1,6 +1,6 @@
 html, body {
   width: 100%;
-  @apply font-sans antialiased text-gray-900 bg-gray-100 overflow-x-hidden;
+  @apply font-sans uppercase antialiased text-gray-900 bg-gray-100 overflow-y-hidden overflow-x-hidden;
 }
 
 img, video {
@@ -11,16 +11,21 @@ img, video {
   @apply relative z-10;
 }
 
+h1 {
+  @apply font-black text-3xl tracking-wide6;
+}
+
+
+
 ::-webkit-scrollbar {
   @apply w-3 h-2;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-900;
+  @apply bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  /* @apply bg-primary-500; */
   @apply bg-white;
 }
 

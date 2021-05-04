@@ -14,7 +14,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist', 'assets'),
-    filename: 'main.bundle.js'
+    filename: 'main.bundle.js',
+    library: 'wp'
   },
   plugins: [
     new MiniCssExtractPlugin({

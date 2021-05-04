@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% include 'meta.njk' %}
-    <link rel="stylesheet" href="/assets/main.bundle.css">
-    <script defer src="/assets/main.bundle.js"></script>
-  </head>
-  <body class="{{ 'debug-screens' if env.dev }}">
-    {% include 'header.njk' %}
-    <main>
-      {% block body %}
-      {% endblock %}
-    </main>
-    {% include 'footer.njk' %}
-  </body>
+  <div class="parallax">
+    <head>
+      {% include 'meta.njk' %}
+      <link rel="stylesheet" href="/assets/main.bundle.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+      <script src="/assets/main.bundle.js"></script>
+    </head>
+
+    <body class="{{ 'debug-screens' if env.dev }}">
+      {%include 'overlay.njk'%}
+      {% include 'header.njk' %}
+      <main>
+        {% block body %}{% endblock %}
+      </main>
+      {% include 'footer.njk' %}
+    </body>
+  </div>
 </html>

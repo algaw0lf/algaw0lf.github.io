@@ -3,7 +3,13 @@ module.exports = (config) => {
   config.addPassthroughCopy({ public: './' })
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
   config.setBrowserSyncConfig({
-    files: ['dist/**/*'],
+    files: [
+      {
+        match: ['dist/assets/*.css', 'dist/assets/*.js'],
+        fn: function (event, file) {
+          this.reload();
+        }
+      }],
     open: true,
     snippetOptions: {
       rule: {
@@ -12,7 +18,7 @@ module.exports = (config) => {
         },
         match: /<\/head>/i,
       },
-    },
+    }
   })
   config.setDataDeepMerge(true)
   config.setLibrary('md', require('./src/_config/markdown'))

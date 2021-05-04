@@ -1,32 +1,33 @@
 {% set currentPage = page.url %}
 
 <header
-  class="bg-white text-gray-900"
+  class="bg-white text-gray-900 z-40 gap-4"
   x-data="{ mobileNav: false }"
 >
-  <div class="container flex justify-between items-center max-w-7xl">
-
+  <div class="container flex justify-between items-center py-1 max-w-7xl sm:px-8 md:px-16">
     {# Logo #}
     <a href="/" class="flex items-center">
-      <span class="leading-none font-normal text-lg tracking-wide12 hidden md:block">
+      <span class="leading-none font-normal text-xl tracking-wide12 hidden md:block">
         ALGA<span class="font-bold -mr-3">WOLF</span>
       </span>
-      <span class="transform scale-66 md:hidden">
+      <span class="transform scale-75 md:hidden">
         {% include 'assets/wolf.svg' %}
       </span>
     </a>
 
-    <span class="transform scale-66 hidden md:block">
-      {% include 'assets/wolf.svg' %}
-    </span>
+    <a href="/">
+      <span class="transform scale-75 hidden md:block">
+        {% include 'assets/wolf.svg' %}
+      </span>
+    </a>
 
     {# Nav Text Links #}
     <nav class="space-x-4 hidden md:block">
       {% for item in navigation.internal %}
         {% set isCurrentPage = item.link === currentPage %}
-        {% set textColor = 'text-white' if isCurrentPage else 'text-primary-black' %}
+        {% set textColor = 'text-gray-400' if isCurrentPage else 'text-primary-black' %}
         <a
-          class="text-sm font-semibold transition-colors duration-200 hover:text-secondary-400 {{ textColor }}"
+          class="text-sm transition-colors duration-200 hover:text-secondary-400 {{ textColor }}"
           href="{{ item.link }}"
         >
           {{ item.name }}

@@ -58,6 +58,7 @@ module.exports = {
           'IBM Plex Sans',
         ],
         serif: [
+          // 'IBM Plex Serif',
           'PT Serif',
         ],
         mono: [

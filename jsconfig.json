@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/_bundle/*.js", "src/_bundle/js/*.js"]
+    }
+  },
+  "exclude": ["node_modules", "public"]
+}

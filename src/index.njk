@@ -24,6 +24,22 @@
     }
   </script>
 
+  <div class="absolute parallax-layer--back left-32">
+      {% include "wolf-text.njk" %}
+  </div>
+  <script>
+    {# (function anim() {
+      anime({
+        targets: '.wolf-text-line',
+        translateX: anime.random(-50, 50),
+        delay: anime.stagger(anime.random(0, 50)),
+        easing: 'easeInOutQuad',
+        duration: 2000,
+        complete: anim
+      });
+    })(); #}
+  </script>
+
   <section
     x-data="contactSubmit()"
     x-init="init()"
@@ -43,47 +59,19 @@
   </section>
 
   {# Hero #}
+  <div class="text-center py-8">
+    <h1>
+        VCV Rack Modules
+      </h1>
+    <p class="text-gray-700 mt-2 m-auto text-base tracking-wide3">Polyphonic & Mono IO & CV - Guided Randomness - Optimized Performance</p>
+  </div>
 
-  <div role="presentation" class="hidden lg:block" style="height: 22px;"></div>
-
-  <section>
-    <span class="flex items-center flex-wrap justify-center mod-drop-shadow m-auto max-w-5xl">
-      <div class="px-16 py-4">
-        {% include 'assets/PolyVolt.svg' %}
-      </div>
-      <div class="px-16 py-4">
-        {% include 'assets/StrumBlue.svg' %}
-      </div>
-      <div class="px-16 py-4">
-        {% include 'assets/ADSR.svg' %}
-      </div>
-      <div class="px-16 py-4">
-        {% include 'assets/Orbit.svg' %}
-      </div>
-    </span>
-  </section>
+  {% include "vcv-modules.njk" %}
 
   {# What I Do #}
   <section class="relative section-spacing">
-
-    {# Blobs #}
-    {# <div class="z-0 opacity-25 text-gray-300">
-      <span class="absolute" style="width: 640px; top: -128px; left: -360px;">
-        {% include 'icons/blob-1.svg' %}
-      </span>
-      <span class="absolute" style="width: 640px; top: 320px; right: -360px;">
-        {% include 'icons/blob-1.svg' %}
-      </span>
-    </div> #}
-
     {# Content #}
     <div class="container text-center">
-      <h2 class="text-3xl leading-tight font-extrabold sm:text-4xl">
-        Jack of all trades.
-        <br class="sm:hidden">
-        Master of some.
-      </h2>
-      <p class="text-gray-700 mt-1 italic sm:text-lg">I can make myself useful in a whole number of ways.</p>
       <div class="mt-12 grid gap-12 sm:gap-16 sm:mt-24 sm:grid-cols-3 lg:gap-24">
         {% for skill in skills %}
           <div class="flex flex-col">
