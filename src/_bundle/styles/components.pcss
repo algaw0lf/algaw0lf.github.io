@@ -18,50 +18,10 @@
   filter: drop-shadow(17px 11px 25px #0000004a);
 }
 
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective-origin-x: 50%;
-}
-
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transform-origin-x: 0%;
-}
-
-.parallax-layer--base {
-  transform: translateZ(0);
-}
-
-.parallax-layer--back {
-  transform: translateZ(-3px) scale(2.5);
-}
-
 .wolf-text {
-  @apply text-white;
-  -webkit-transform-origin-x: 0%;
-  -webkit-transform-origin-y: 0%;
-  /* word-spacing: 190px;
-  font-size: 12px;
-  line-height: 50px;
-  letter-spacing: 10px; */
+  @apply text-white text-base;
 }
 
 .wolf-text-line {
-  @apply text-white text-opacity-100;
-  font-size: 12px;
-  -webkit-transform-origin-x: 50%;
-  -webkit-transform-origin-y: 50%;
-  line-height: 2;
-  letter-spacing: 3px;
-  transform: translateX(4rem);
-  /* word-spacing: 190px;
-  line-height: 50px;
-  letter-spacing: 10px; */
+  letter-spacing: 200px;
 }

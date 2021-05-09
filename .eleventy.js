@@ -1,3 +1,4 @@
+let gzipStatic = require('connect-gzip-static');
 module.exports = (config) => {
   config.addFilter('prettyDate', require('./src/_config/prettyDate'))
   config.addPassthroughCopy({ public: './' })
@@ -11,6 +12,7 @@ module.exports = (config) => {
         }
       }],
     open: true,
+    // middleware: [gzipStatic(__dirname + '/dist')],
     snippetOptions: {
       rule: {
         fn: function (snippet, match) {

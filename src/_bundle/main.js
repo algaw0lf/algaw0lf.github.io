@@ -4,8 +4,8 @@ import './main.pcss'
 // JS
 import 'alpinejs'
 import 'lazysizes'
-// import './js/anim.js'
-
+// import './fn.js'
+import './anim.js'
 
 // import Turbolinks from 'turbolinks'
 // Turbolinks.start()

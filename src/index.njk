@@ -23,45 +23,25 @@
     }
   </script>
 
-  <div class="absolute parallax-layer--back left-32">
-      {% include "wolf-text.njk" %}
-  </div>
-  <script>
-    {# (function anim() {
-      anime({
-        targets: '.wolf-text-line',
-        translateX: anime.random(-50, 50),
-        delay: anime.stagger(anime.random(0, 50)),
-        easing: 'easeInOutQuad',
-        duration: 2000,
-        complete: anim
-      });
-    })(); #}
-  </script>
+  {% include "ascii-wolf.njk" %}
 
-  {# <section
-    x-data="contactSubmit()"
-    x-init="init()"
-    x-cloak
-    x-show.transition="didSubmit"
-    class="fixed top-0 right-0 m-8 bg-white px-5 py-4 shadow-lg z-50 w-96"
-  >
-    <div class="flex items-center">
-      <span class="flex-none w-16 text-green-600">
-        {% include 'icons/check.svg' %}
-      </span>
-      <div class="ml-4">
-        <p class="font-extrabold leading-none text-xl">Contact Success!</p>
-        <p class="mt-2 text-sm">Thank you for reaching out.<br>I will be in touch.</p>
-      </div>
+  {# <section x-data="contactSubmit()" z x-init="init()" x-cloak x-show.transition="didSubmit"
+  class="fixed top-0 right-0 m-8 bg-white px-5 py-4 shadow-lg z-50 w-96">
+  <div class="flex items-center">
+    <span class="flex-none w-16 text-green-600">
+      {% include 'icons/check.svg' %}
+    </span>
+    <div class="ml-4">
+      <p class="font-extrabold leading-none text-xl">Contact Success!</p>
+      <p class="mt-2 text-sm">Thank you for reaching out.<br>I will be in touch.</p>
     </div>
-  </section> #}
+  </div>
+</section> #}
 
-  {# Hero #}
-  <div class="text-center py-8">
+  <div class="text-center py-8 px-6">
     <h1>
-        VCV Rack Modules
-      </h1>
+      VCV Rack Modules
+    </h1>
     <p class="text-gray-700 mt-2 m-auto text-sm tracking-wide3">Polyphonic & Mono IO & CV - Guided Randomness - Optimized Performance</p>
   </div>
 
@@ -92,6 +72,6 @@
     </div>
   </section>
 
-  {# {% include 'contact-cta.njk' %} #}
+  {% include 'contact-cta.njk' %}
 
 {% endblock %}

@@ -1,37 +1,29 @@
 {% set currentPage = page.url %}
 
-<header
-  class="bg-white text-gray-900 z-40 gap-4"
-  x-data="{ mobileNav: false }"
->
-  <div class="container flex justify-between items-center py-1 max-w-7xl sm:px-8 md:px-16">
-    {# Logo #}
-    <a href="/" class="flex items-center">
-      <span class="leading-none font-normal text-xl tracking-wide12 hidden md:block">
+<header class="bg-white text-gray-900 z-40 gap-4" x-data="{ mobileNav: false }">
+  <div class="container flex justify-between items-center py-2 max-w-7xl sm:px-8 md:px-16">
+
+    <a href="/" class="w-56 md:none items-center">
+      <span class="leading-none font-normal text-base tracking-wide6 hidden md:block">
         ALGA<span class="font-bold -mr-3">WOLF</span>
       </span>
-      <span class="transform scale-100 md:hidden py-1">
+      <span class="transform scale-100 md:hidden">
         <img src="/assets/wolf.png">
-        {# {% include 'assets/wolf.svg' %} #}
       </span>
     </a>
 
     <a href="/">
-      <span class="transform scale-100 hidden md:block py-1">
+      <span class="transform scale-100 hidden md:block">
         <img src="/assets/wolf.png">
-        {# {% include 'assets/wolf.svg' %} #}
       </span>
     </a>
 
     {# Nav Text Links #}
-    <nav class="space-x-4 hidden md:block">
+    <nav class="space-x-4 w-56 text-right tracking-wide6">
       {% for item in navigation.internal %}
         {% set isCurrentPage = item.link === currentPage %}
         {% set textColor = 'text-gray-400' if isCurrentPage else 'text-primary-black' %}
-        <a
-          class="text-sm transition-colors duration-200 hover:text-secondary-400 {{ textColor }}"
-          href="{{ item.link }}"
-        >
+        <a class="text-sm transition-colors duration-200 hover:text-secondary-400 {{ textColor }}" href="{{ item.link }}">
           {{ item.name }}
         </a>
       {% endfor %}
@@ -52,28 +44,25 @@
       {% endfor %}
     </nav> #}
 
-    <button @click="mobileNav = !mobileNav" class="w-6 h-6 md:hidden">
+    {# <button @click="mobileNav = !mobileNav" class="w-6 h-6 md:hidden">
       <span x-show="!mobileNav">
         {% include 'icons/menu.svg' %}
       </span>
       <span x-show="mobileNav">
         {% include 'icons/close.svg' %}
       </span>
-    </button>
+    </button> #}
 
   </div>
 
-  <nav class="container md:hidden" x-cloak x-show.transition="mobileNav">
+  {# <nav class="container md:hidden" x-cloak="x-cloak" x-show.transition="mobileNav">
     {% for item in navigation.internal %}
       {% set isCurrentPage = item.link === currentPage %}
-      <a
-        class="block py-4 font-semibold text-sm tracking-tight text-white"
-        href="{{ item.link }}"
-      >
+      <a class="block py-4 font-semibold text-sm tracking-tight text-white" href="{{ item.link }}">
         {{ item.name }}
       </a>
       <div class="h-px bg-primary-300" style="opacity: 0.2;"></div>
     {% endfor %}
-  </nav>
+  </nav> #}
 
 </header>
