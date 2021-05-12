@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     {% include 'meta.njk' %}
-    <link rel="stylesheet" href="/assets/main.bundle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script defer="defer" src="/assets/main.bundle.js"></script>
+    <link rel="stylesheet" href="/assets/main.css">
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script> #}
+    <script defer="defer" src="/assets/main.js"></script>
   </head>
 
   <body class="{{ 'debug-screens' if env.dev }}">

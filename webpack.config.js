@@ -16,13 +16,13 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist', 'assets'),
-    filename: 'main.bundle.js',
+    filename: 'main.js',
     library: 'wp'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'main.bundle.css'
-    })
+      filename: 'main.css'
+    }),
     // new CompressionPlugin({
     //   test: /\.(js|css|html|svg)$/,
     //   minRatio: 0,

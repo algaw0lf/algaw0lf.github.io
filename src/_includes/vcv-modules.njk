@@ -1,40 +1,20 @@
 <section>
-    <div class="flex items-center flex-wrap justify-center mod-drop-shadow m-auto max-w-7xl fadeIn-1000">
-        <div class="flex-row px-16 py-4 space-y-8">
-            <div class="m-auto">
-                {# {% include 'assets/PolyVolt.svg' %} #}
-                <img src="assets/PolyVolt.svg" class="m-auto">
+    <div class="flex-col-centered drop-shadow fadeIn-1000 mx-32 gap-y-12">
+        {% for mod in vcvModules %}
+            <div class="flex-row space-y-12 items-start w-60">
+                <div>
+                    <img class="mx-auto" src="{{mod.src}}">
+                </div>
+                <div class="text-sm my-2">
+                    <div class="my-2">
+                        <span class="bg-black py-0_5 px-4 text-white tracking-wide8">{{ mod.name }}</span>
+                    </div>
+                    {# {% for feature in mod.features %}
+                        <div class="my-2">
+                            <span class="bg-white py-0_5 px-4">{{ feature }}</span>
+                        </div>
+                    {% endfor %} #}
+                </div>
             </div>
-            <div class="m-auto text-center tracking-wide8 text-sm text-white">
-                <span class="bg-black py-0_5 px-3">Polyvolt</span>
-            </div>
-        </div>
-        <div class="flex-row px-16 py-4 space-y-8">
-            <div class="m-auto">
-                {# {% include 'assets/StrumBlue.svg' %} #}
-                <img src="assets/StrumBlue.svg" class="m-auto">
-            </div>
-            <div class="m-auto text-center tracking-wide8 text-sm text-white">
-                <span class="bg-black py-0_5 px-3">Strum</span>
-            </div>
-        </div>
-        <div class="flex-row px-16 py-4 space-y-8">
-            <div class="m-auto">
-                {# {% include 'assets/ADSR.svg' %} #}
-                <img src="assets/ADSR.svg" class="m-auto">
-            </div>
-            <div class="m-auto text-center tracking-wide8 text-sm text-white">
-                <span class="bg-black py-0_5 px-3">ADSR</span>
-            </div>
-        </div>
-        <div class="flex-row px-16 py-4 space-y-8">
-            <div class="m-auto">
-                {# {% include 'assets/Orbit.svg' %} #}
-                <img src="assets/Orbit.svg" class="m-auto">
-            </div>
-            <div class="m-auto text-center tracking-wide8 text-sm text-white">
-                <span class="bg-black py-0_5 px-3">Orbit</span>
-            </div>
-        </div>
-    </div>
-</section>
+        {% endfor %}
+    </section>

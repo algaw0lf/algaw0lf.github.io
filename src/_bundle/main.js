@@ -10,16 +10,28 @@ import './anim.js'
 // import Turbolinks from 'turbolinks'
 // Turbolinks.start()
 
-// import anime from 'animejs/lib/anime.es.js'
+import {html, css, LitElement} from 'lit';
 
-// function animateWolfText() {
-//     anime({
-//         targets: '.wolf-text',
-//         letterSpacing: anime.random(7, 14),
-//         easing: 'easeInOutQuad',
-//         duration: 40000,
-//         complete: animateWolfText
-//     });
-// }
+export class SimpleGreeting extends LitElement {
+  static get styles() {
+    return css`p { color: blue }`;
+  }
+z
+  static get properties() {
+    return {
+      name: {type: String}
+    }
+  }
 
-// animateWolfText();
+  constructor() {
+    super();
+    this.name = 'Somebody';
+  }
+
+  render() {
+    return html`<p>Hello, ${this.name}!</p>`;
+    html
+  }
+}
+
+customElements.define('simple-greeting', SimpleGreeting);

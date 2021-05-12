@@ -9,6 +9,9 @@ module.exports = {
       screens: {
         'portrait': { 'raw': '(orientation: portrait)' },
         'landscape': { 'raw': '(orientation: landscape)' },
+        '3xl': '2048px',
+        '4xl': '2560px',
+        '5xl': '3072px'
       },
       colors: {
         transparent: 'transparent',
@@ -100,7 +103,7 @@ module.exports = {
         '64': '22.173rem',
         '128': '35.8759rem',
         '256': '58.0472rem',
-        '508': ''
+        '384': '93.9203rem'
       },
       fontSize: {
         xxs: '0.7683rem',
