@@ -1,9 +1,8 @@
-import anime from 'animejs/lib/anime.min.js'
+import anime from 'animejs'
 
 (() => {
   let r = anime.random
   let el
-  window.fn = {}
 
   function r_span(steps, max, classes = "") {
     let t = ""

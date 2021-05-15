@@ -1,10 +1,13 @@
 let gzipStatic = require('connect-gzip-static')
-require('fs').mkdir('./dist', (err) => console.log(err))
+require('fs').mkdir('dist', (err) => console.log(err))
 
 module.exports = (config) => {
-  config.addFilter('prettyDate', require('./src/_config/prettyDate'))
+  config.addFilter('prettyDate', require('./src/_config/prettyDate.js'))
   config.addPassthroughCopy({ public: './' })
+  config.addPassthroughCopy('./src/.nojekyll')
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
+  config.addPassthroughCopy('node_modules/@webcomponents/webcomponentsjs')
+  config.addPassthroughCopy('node_modules/lit/polyfill-support.js')
   config.setBrowserSyncConfig({
     files: [
       {
@@ -25,7 +28,7 @@ module.exports = (config) => {
     }
   })
   config.setDataDeepMerge(true)
-  config.setLibrary('md', require('./src/_config/markdown'))
+  config.setLibrary('md', require('./src/_config/markdown.js'))
   return {
     dir: {
       input: 'src',
