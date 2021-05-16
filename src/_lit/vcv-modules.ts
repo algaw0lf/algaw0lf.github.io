@@ -12,19 +12,19 @@ export class VcvModule extends RootLitElement {
 
     render() {
         return html`
-        <img src="http://localhost:8080/icons/caret--down.svg" alt="\\\/" class="relative m-auto pb-4 transition duration-300 ${this.over ? "": "opacity-0 transform -translate-y-8"}">
+        <img src="http://localhost:8080/icons/caret--down.svg" alt="\\\/" class="relative mx-auto pb-4 transition duration-300 ${this.over ? "" : "opacity-0 transform -translate-y-5"}">
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
         class="flex-row space-y-12 items-start w-60 transition duration-200 transform ${this.over || !this.focused ? "" : "scale-95 filter-grayscale-100"}">
             <div>
-                <img class="mx-auto" src="${this.mod.src}">
+                <img class="mx-auto py-5 px-3 ${this.over ? "border-gray-400 border" : ""}" src="${this.mod.src}">
             </div>
-            <div class="text-sm my-2">
+            <div class="text-sm">
                 <div class="my-2">
-                    <span class="text-white bg-black py-0_5 px-4 ${this.over ? "font-bold": ""} tracking-wide8">${this.mod.title}</span>
+                    <span class="text-white bg-black py-0_5 px-4 ${this.over ? "font-bold" : ""} tracking-wide8">${this.mod.title}</span>
                 </div>
                 ${this.mod.features.map(f => html`
                 <div >
-                    <div class="inline-block transition duration-300 ${this.over ? 'bg-white' : 'text-transparent transform translate-y-12'} px-4">${f}</div>
+                    <div class="inline-block transition duration-300 ${this.over ? 'bg-white ' : 'text-transparent transform translate-y-9'} px-4">${f}</div>
                 </div>`)}
             </div>
         </div>
