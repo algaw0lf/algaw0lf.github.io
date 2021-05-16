@@ -1,1 +1,0 @@
-{"version":3,"file":"lit.js","sourceRoot":"","sources":["../lit.ts"],"names":[],"mappings":"AAAA,cAAc,oBAAoB,CAAA;AAClC,cAAc,KAAK,CAAA;AACnB,cAAc,mBAAmB,CAAA","sourcesContent":["export * from './root-lit-element'\r\nexport * from 'lit'\r\nexport * from 'lit/decorators.js'"]}

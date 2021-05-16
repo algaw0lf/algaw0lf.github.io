@@ -32,6 +32,7 @@ export class VcvModule extends RootLitElement {
     }
 }
 
+
 @customElement('vcv-modules')
 export class VcvModules extends RootLitElement {
     @property({ type: Number })
