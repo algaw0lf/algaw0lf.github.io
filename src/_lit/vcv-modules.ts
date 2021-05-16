@@ -1,7 +1,5 @@
-import { RootLitElement } from './root-lit-element'
-import { html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-const mods = require('../../_data/vcvModules')
+import { customElement, property, html, RootLitElement } from './lit'
+const mods = require('@data/vcvModules')
 
 @customElement('vcv-module')
 export class VcvModule extends RootLitElement {
@@ -15,7 +13,7 @@ export class VcvModule extends RootLitElement {
     render() {
         return html`
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "opacity-60 transform scale-95"}">
+        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "transform scale-95"}">
             <div>
                 <img class="mx-auto" src="${this.mod.src}">
             </div>

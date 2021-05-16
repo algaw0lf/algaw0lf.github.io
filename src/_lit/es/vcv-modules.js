@@ -4,10 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { RootLitElement } from './root-lit-element';
-import { html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-const mods = require('../../_data/vcvModules');
+import { customElement, property, html, RootLitElement } from './lit';
+const mods = require('@data/vcvModules');
 let VcvModule = class VcvModule extends RootLitElement {
     constructor() {
         super(...arguments);
@@ -18,7 +16,7 @@ let VcvModule = class VcvModule extends RootLitElement {
     render() {
         return html `
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "opacity-60 transform scale-95"}">
+        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "transform scale-95"}">
             <div>
                 <img class="mx-auto" src="${this.mod.src}">
             </div>

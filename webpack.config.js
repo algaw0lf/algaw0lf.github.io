@@ -28,6 +28,12 @@ module.exports = {
       // deleteOriginalAssets: false,
     }),
   ],
+  resolve: {
+    alias: {
+      '@bundle': path.resolve(__dirname, 'src/_bundle'),
+      '@data': path.resolve(__dirname, 'src/_data'),
+    }
+  },
   module: {
     rules: [
       {
