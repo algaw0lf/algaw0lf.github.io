@@ -1,18 +1,10 @@
-{% set code %}
+{# {% set code %}
 {% highlight "js" %}
-let needsMattsHelp = true
-
-const contactMatt = (message) => {
-  return alert(message)
-}
-
-if (needsMattsHelp) {
-  contactMatt("Let's get started!")
-}
+let needsMattsHelp = true const contactMatt = (message) => { return alert(message) } if (needsMattsHelp) { contactMatt("Let's get started!") }
 {% endhighlight %}
-{% endset %}
+{% endset %} #}
 
-<section class="container flex flex-wrap items-center section-spacing">
+<section class="relative bottom-0 w-full">
 
   {# Code Snippet #}
   {# <div class="w-full lg:w-1/2 bg-transparent p-4 text-white shadow-lg text-sm sm:text-base">
@@ -27,27 +19,20 @@ if (needsMattsHelp) {
   </div> #}
 
   {# Contact Content #}
-  <div class="w-full mx-auto mt-12 text-center lg:mt-0 lg:w-1/2 lg:pl-16 lg:text-left">
-    <h3 class="relative inline text-2xl font-extrabold leading-tight lg:text-3xl">
-      Do you want to build a website?
-      <span class="w-6 h-6 absolute lg:hidden animate-bounce" style="top: -16px; left: -32px;">
-        {% include 'icons/music.svg' %}
-      </span>
-      <span class="w-8 h-8 absolute hidden lg:block animate-bounce" style="top: -32px; left: -32px;">
-        {% include 'icons/music.svg' %}
-      </span>
+  <div class="bg-white text-center py-5 px-11 mx-auto">
+    <h3 class="relative inline font-extrabold leading-tight text-lg lg:text-xl">
+      Do you have a request?
     </h3>
-    <p class="mt-2 sm:mt-4 text-sm sm:text-base lg:text-lg">
-      Don't get <strong class="font-bold italic">Frozen</strong> with a site you don't love. I can refactor, refresh, or just rebuild you a new website that will knock your socks off.
+    <p class="py-3 text-sm lg:text-sm">
+      Have a new feature suggestion, idea or module you would like to disscuss. Then lets have a chat!
     </p>
-    <a
-      class="inline-flex items-center mt-6 text-primary-500 font-bold "
-      href="/contact/"
-    >
-      Contact
-      <span class="w-4 h-4 ml-1">
+    <div class="py-1">
+      <a class="bg-black text-white py-1 px-5 hover:px-10 inline-flex items-center text-sm tracking-wide6 hover:text-secondary-400" href="/contact/">
+        Contact
+        {# <span class="w-4 h-4 ml-1">
         {% include 'icons/arrow.svg' %}
-      </span>
-    </a>
+      </span> #}
+      </a>
+    </div>
   </div>
 </section>

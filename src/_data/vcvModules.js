@@ -7,7 +7,7 @@ module.exports = [
   {
     src: 'assets/PolyVolt.svg',
     title: 'Monopoly',
-    features: ['Mono -> poly']
+    features: ['Mono to poly']
   },
   {
     src: 'assets/StrumBlue.svg',
@@ -22,6 +22,6 @@ module.exports = [
   {
     src: 'assets/Orbit.svg',
     title: 'Orbit',
-    features: ['Poly XY -> 3D positions']
+    features: ['Poly XY to 3D positions']
   },
 ]

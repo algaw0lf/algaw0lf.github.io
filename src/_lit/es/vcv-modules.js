@@ -11,13 +11,14 @@ const mods = require('../../_data/vcvModules');
 let VcvModule = class VcvModule extends RootLitElement {
     constructor() {
         super(...arguments);
+        this.focused = 0;
         this.over = 0;
-        this.mod = { src: '', title: '', features: [''] };
+        this.mod = { src: '', title: '', features: [] };
     }
     render() {
         return html `
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-        class="flex-row space-y-12 items-start ${this.over ? "w-80" : "w-60"}">
+        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "opacity-60 transform scale-95"}">
             <div>
                 <img class="mx-auto" src="${this.mod.src}">
             </div>
@@ -25,15 +26,18 @@ let VcvModule = class VcvModule extends RootLitElement {
                 <div class="my-2">
                     <span class="bg-black py-0_5 px-4 text-white tracking-wide8">${this.mod.title}</span>
                 </div>
-                <!-- ${this.mod.features.map(f => html `
+                ${this.mod.features.map(f => html `
                 <div class="my-2" >
-                    <span class="bg-white py-0_5 px-4">${f}</span>
-                </div>`)} -->
+                    <span class="${this.over ? 'bg-white' : 'transparent text-transparent'} py-0_5 px-4">${f}</span>
+                </div>`)}
             </div>
         </div>
         `;
     }
 };
+__decorate([
+    property({ type: Number })
+], VcvModule.prototype, "focused", void 0);
 __decorate([
     property()
 ], VcvModule.prototype, "over", void 0);
@@ -45,13 +49,21 @@ VcvModule = __decorate([
 ], VcvModule);
 export { VcvModule };
 let VcvModules = class VcvModules extends RootLitElement {
+    constructor() {
+        super(...arguments);
+        this.over = 0;
+    }
     render() {
         return html `
-            <div class="flex-col-centered drop-shadow fadeIn-1000 mx-32 gap-y-12">
-                ${mods.map(m => html `<vcv-module .mod=${m}></vcv-module>`)}
+            <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
+                class="flex-col-centered drop-shadow fadeIn-1000 mx-32 gap-y-12">
+                ${mods.map(m => html `<vcv-module focused=${this.over} .mod=${m}></vcv-module>`)}
             </div>`;
     }
 };
+__decorate([
+    property({ type: Number })
+], VcvModules.prototype, "over", void 0);
 VcvModules = __decorate([
     customElement('vcv-modules')
 ], VcvModules);

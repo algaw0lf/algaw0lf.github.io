@@ -31,7 +31,7 @@ import anime from 'animejs'
     let els = el.querySelectorAll('.' + targets)
     let e = ['easeInQuad', 'easeInSine', 'easeInExpo', 'linear']
     function run() {
-      let s = i % r(3, 15) == 0
+      let s = i % r(3, 11) == 0
       i = s ? 1 : ++i
       let r13 = r(1, 3)
       let r510 = r(5, 10)
