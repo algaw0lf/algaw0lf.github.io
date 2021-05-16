@@ -1,7 +1,11 @@
+:root {
+  /* w-3 */
+  --scrollbar-width: 0.764rem
+}
+
 html,
 body {
-  width: 100%;
-  @apply font-sans uppercase antialiased text-gray-900 bg-gray-100 overflow-y-hidden overflow-x-hidden;
+  @apply font-sans uppercase antialiased text-gray-900 bg-gray-100;
 }
 
 img,
@@ -17,13 +21,13 @@ video {
 
 section {
 }
-
 h1 {
   @apply font-black text-3xl tracking-wide6;
 }
 
 ::-webkit-scrollbar {
   @apply w-3 h-2;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
@@ -36,6 +40,10 @@ h1 {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-secondary-400;
+}
+
+.w-full-scroll{
+  width: calc(100% - var(--scrollbar-width));
 }
 
 .wrapper {

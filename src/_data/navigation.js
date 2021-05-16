@@ -1,12 +1,16 @@
 module.exports = {
+  header: [
+    { icon: 'icons/email.svg', link: '/contact/' },
+    { icon: 'icons/github.svg', link: 'https://github.com/algawolf' },
+    { icon: 'icons/linkedin.svg', link: 'https://www.linkedin.com/in/aeronmiles/' },
+  ],
   internal: [
     // { name: 'BLOG', link: '/blog/' },
     { name: 'CONTACT', link: '/contact/' },
     // { name: 'WORK', link: '/work/' },
   ],
   external: [
-    // { icon: 'github', link: 'https://github.com/mattwaler' },
-    // { icon: 'linkedin', link: 'https://www.linkedin.com/in/mattwaler/' },
-    // { icon: 'dev', link: 'https://dev.to/mattwaler' },
+    { icon: 'icons/github.svg', link: 'https://github.com/algawolf' },
+    { icon: 'icons/linkedin.svg', link: 'https://www.linkedin.com/in/aeronmiles/' },
   ],
 }

@@ -15,18 +15,19 @@ let VcvModule = class VcvModule extends RootLitElement {
     }
     render() {
         return html `
+        <img src="http://localhost:8080/icons/caret--down.svg" alt="\\\/" class="relative m-auto pb-4 transition duration-300 ${this.over ? "" : "opacity-0 transform -translate-y-8"}">
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-        class="flex-row space-y-12 items-start w-60 transition duration-250 ${this.over || !this.focused ? "opacity-100" : "transform scale-95"}">
+        class="flex-row space-y-12 items-start w-60 transition duration-200 transform ${this.over || !this.focused ? "" : "scale-95 filter-grayscale-100"}">
             <div>
                 <img class="mx-auto" src="${this.mod.src}">
             </div>
             <div class="text-sm my-2">
                 <div class="my-2">
-                    <span class="bg-black py-0_5 px-4 text-white tracking-wide8">${this.mod.title}</span>
+                    <span class="text-white bg-black py-0_5 px-4 ${this.over ? "font-bold" : ""} tracking-wide8">${this.mod.title}</span>
                 </div>
                 ${this.mod.features.map(f => html `
-                <div class="my-2" >
-                    <span class="${this.over ? 'bg-white' : 'transparent text-transparent'} py-0_5 px-4">${f}</span>
+                <div >
+                    <div class="inline-block transition duration-300 ${this.over ? 'bg-white' : 'text-transparent transform translate-y-12'} px-4">${f}</div>
                 </div>`)}
             </div>
         </div>
@@ -56,7 +57,8 @@ let VcvModules = class VcvModules extends RootLitElement {
             <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
                 class="flex-col-centered drop-shadow fadeIn-1000 mx-32 gap-y-12">
                 ${mods.map(m => html `<vcv-module focused=${this.over} .mod=${m}></vcv-module>`)}
-            </div>`;
+            </div>
+            `;
     }
 };
 __decorate([
