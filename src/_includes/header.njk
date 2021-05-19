@@ -2,6 +2,7 @@
 
 <header class="bg-white text-gray-900 z-40 gap-4">
   <div class="container flex justify-evenly items-center py-2 max-w-7xl">
+
     <a href="/" class="w-56 items-center">
       <span class="leading-none font-normal text-base tracking-wide9 hidden sm:block">
         ALGA<b>WOLF</b>
@@ -18,59 +19,7 @@
     </a>
 
     {# Nav Text Links #}
-    <nav class="flex justify-end space-x-3 text-right tracking-wide6 w-56">
-      {# {% for item in navigation.internal %}
-          {% set isCurrentPage = item.link === currentPage %}
-          {% set textColor = 'text-gray-400' if isCurrentPage else 'text-primary-black' %}
-          <a class="text-sm transition-colors duration-200 hover:text-secondary-400 {{ textColor }}" href="{{ item.link }}">
-            {{ item.name }}
-          </a>
-        {% endfor %} #}
-      <a target="_blank" rel="noopener" class="flex items-center justify-end w-8 h-8" aria-label="icons/email.svg profile link" href="https://github.com/algawolf">
-        <img src="http://localhost:8080/icons/email.svg" class="w-5_5 h-5_5">
-      </a>
-      <a target="_blank" rel="noopener" class="flex items-center justify-end w-8 h-8" aria-label="icons/logo--linkedin.svg profile link" href="https://www.linkedin.com/in/aeronmiles/">
-        <img src="http://localhost:8080/icons/logo--linkedin.svg" class="w-5_5 h-5_5">
-      </a>
-      <a target="_blank" rel="noopener" class="flex items-center justify-end w-8 h-8" aria-label="icons/logo--github.svg profile link" href="https://github.com/algawolf">
-        <img src="http://localhost:8080/icons/logo--github.svg" class="w-5_5 h-5_5">
-      </a>
-    </nav>
-
-    {# Nav Icons #}
-    {# <nav class="text-primary-900">
-      {% for item in navigation.external %}
-        <a
-          aria-label="{{ item.icon }} profile link"
-          href="{{ item.link }}"
-          target="_blank"
-          rel="noopener"
-          class="w-5 h-5 hidden md:block transition-colors duration-200 hover:text-white"
-        >
-          {% include 'icons/' + item.icon + '.svg' %}
-        </a>
-      {% endfor %}
-    </nav> #}
-
-    {# <button @click="mobileNav = !mobileNav" class="w-6 h-6 md:hidden">
-      <span x-show="!mobileNav">
-        {% include 'icons/menu.svg' %}
-      </span>
-      <span x-show="mobileNav">
-        {% include 'icons/close.svg' %}
-      </span>
-    </button> #}
+    <aw-header></aw-header>
 
   </div>
-
-  {# <nav class="container md:hidden" x-cloak="x-cloak" x-show.transition="mobileNav">
-    {% for item in navigation.internal %}
-      {% set isCurrentPage = item.link === currentPage %}
-      <a class="block py-4 font-semibold text-sm tracking-tight text-white" href="{{ item.link }}">
-        {{ item.name }}
-      </a>
-      <div class="h-px bg-primary-300" style="opacity: 0.2;"></div>
-    {% endfor %}
-  </nav> #}
-
 </header>

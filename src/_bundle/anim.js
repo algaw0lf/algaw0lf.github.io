@@ -43,22 +43,33 @@ function span_lines(addClasses = "") {
  */
 function mech_space(targetClass) {
   let i = 0
+  let s = 0
   let els = el.querySelectorAll('.' + targetClass)
   let e = ['easeInQuad', 'easeInSine', 'easeInExpo', 'linear']
+  let r13 = 0;
+  let r510 = 0;
+  let ls = () => s ? 0 : r(-15, 10) * 4
+  let op = () => s ? 1 : r(0, r13) > 0 ? 0 : 1
+  let di = () => r(0, 1) > 0 ? 'normal' : 'reverse'
+  let ea = () => e[r(0, 3)]
+  let de = () => r(0, r510) * 200
+  let du = () => s ? (r(0, 3) * 50) + 10 : r(1, 3) * 2000
+  let co = () => s ? setTimeout(run, r(1, 3) * 3000) : run()
+
   function run() {
-    let s = i % r(3, 11) == 0
+    s = i % r(3, 11) == 0
     i = s ? 1 : ++i
-    let r13 = r(1, 3)
-    let r510 = r(5, 10)
+    r13 = r(1, 3)
+    r510 = r(5, 10)
     animeInsts.push(anime({
       targets: els,
-      letterSpacing: () => s ? 0 : r(-15, 10) * 4,
-      opacity: () => s ? 1 : r(0, r13) > 0 ? 0 : 1,
-      direction: () => r(0, 1) > 0 ? 'normal' : 'reverse',
-      easing: () => e[r(0, 3)],
-      delay: () => r(0, r510) * 200,
-      duration: () => s ? (r(0, 3) * 50) + 10 : r(1, 3) * 2000,
-      complete: () => s ? setTimeout(run, r(1, 3) * 3000) : run()
+      letterSpacing: ls,
+      opacity: op,
+      direction: di,
+      easing: ea,
+      delay: de,
+      duration: du,
+      complete: co
     }))
   }
   run()
