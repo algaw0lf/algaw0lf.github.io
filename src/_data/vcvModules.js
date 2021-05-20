@@ -1,27 +1,37 @@
 module.exports = [
   {
-    src: 'assets/PolyVolt.svg',
+    src: 'assets/PolyVolt-min.svg',
     title: 'Polyvolt',
-    features: ['Poly constant voltages']
+    features: ['Poly constant voltages'],
+    w: 15.24,
+    h: 128.5
   },
   {
-    src: 'assets/PolyVolt.svg',
+    src: 'assets/PolyVolt-min.svg',
     title: 'Monopoly',
-    features: ['Mono to poly']
+    features: ['Mono to poly'],
+    w: 15.24,
+    h: 128.5
   },
   {
-    src: 'assets/StrumBlue.svg',
+    src: 'assets/StrumBlue-min.svg',
     title: 'Strum',
-    features: ['Poly pattern sequencer']
+    features: ['Poly pattern sequencer'],
+    w: 55.87944,
+    h: 128.5
   },
   {
-    src: 'assets/ADSR.svg',
+    src: 'assets/ADSR-min.svg',
     title: 'ADSR',
-    features: ['Poly ADSR']
+    features: ['Poly ADSR'],
+    w: 25.4,
+    h: 128.5
   },
   {
-    src: 'assets/Orbit.svg',
+    src: 'assets/Orbit-min.svg',
     title: 'Orbit',
-    features: ['Poly XY to 3D positions']
+    features: ['Poly XY to 3D positions'],
+    w: 15.24,
+    h: 128.5
   },
 ]

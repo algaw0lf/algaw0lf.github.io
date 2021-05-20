@@ -34,13 +34,13 @@ export class Header extends RootLitElement {
                     <span class="leading-none font-normal text-base tracking-wide9 hidden sm:block">
                         ALGA<b>WOLF</b>
                     </span>
-                    <span class="transform scale-100 sm:hidden">
+                    <span class="transform scale-100 h-px40 sm:hidden">
                         <img src="/assets/wolf.png">
                     </span>
                     </a>
 
                     <a href="/">
-                    <span class="transform scale-100 hidden sm:block">
+                    <span class="transform scale-100 h-px40 hidden sm:block">
                         <img src="/assets/wolf.png">
                     </span>
                     </a>

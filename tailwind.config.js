@@ -79,6 +79,8 @@ module.exports = {
         px8: '8px',
         px9: '9px',
         px10: '10px',
+        px32: '32px',
+        px40: '40px',
         px50: '50px',
         px66: '66px',
         px100: '100px',

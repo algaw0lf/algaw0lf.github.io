@@ -15,8 +15,8 @@ export class Footer extends RootLitElement {
         return html`
             <footer class="fixed bottom-0 w-full-scroll m-auto text-center bg-white">
                 <div class="flex items-center justify-center space-x-1 py-1">
-                    <a href="/">Alga<b>wolf</b> © ${this.date}</a>
-                    <p>|</p>
+                    <a href="/">Alga<b>wolf</b> | © ${this.date}</a>
+                    <!-- <p>|</p>
                     <a target="_blank" rel="noopener" href="https://www.carbondesignsystem.com/">
                         <img src="${this.origin}/icons/carbon.svg" class="h-4">
                     </a>
@@ -27,7 +27,7 @@ export class Footer extends RootLitElement {
                     <p>|</p>
                     <a target="_blank" rel="noopener" href="https://lit.dev/">
                         <img src="${this.origin}/icons/logo--lit.svg" class="h-4 filter-grayscale-100">
-                    </a>
+                    </a> -->
                 </div>
             </footer>`
     }
