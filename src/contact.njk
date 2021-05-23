@@ -1,23 +1,13 @@
-{% extends 'page.njk' %}
-{% from 'hero.njk' import hero  %}
-
 {% set title = 'Contact Me' %}
 {% set description = "Contact Matt Waler for development, instruction, or consultation for the web." %}
-
-{% block body %}
-
-  {{ hero(
-    eyebrow = "Don't be shy",
-    heading = "Let's get in touch.",
-    paragraph = "Fill out the contact form below and I promise I will reach out as fast as I can. Thank you in advance for contacting me!"
-  ) }}
-
-  <div class="container grid items-center md:grid-cols-2 gap-24 sections-spacing">
+<div class="flex justify-center">
+  <div class="container grid items-center gap-24 sections-spacing max-w-7xl fixed z-50">
     <form
       name="contact"
       method="post"
       aria-label="contact form"
       action="/?contact"
+      class="bg-white px-12 sm:px-16 md:px-20 lg:px-32 py-12"
     >
       <input type="hidden" name="form-name" value="contact">
       <label class="block pt-8">
@@ -36,10 +26,5 @@
         <button type="submit" class="button ml-auto">Submit</button>
       </div>
     </form>
-    <img class="hidden shadow-none md:block" src="/assets/contact.svg" alt="Contact image.">
   </div>
-
-
-{% endblock body %}
-
-
+</div>

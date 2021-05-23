@@ -2,13 +2,11 @@ import { customElement, html, RootLitElement } from './lit'
 
 @customElement('aw-footer')
 export class Footer extends RootLitElement {
-
     origin = ""
     date = 0
     constructor()
     {
         super()
-        this.origin = window.location.origin
         this.date = new Date().getFullYear()
     }
     render() {

@@ -1,4 +1,4 @@
-import { customElement, property, html, RootLitElement, cache } from './lit'
+import { customElement, property, html, RootLitElement } from './lit'
 const mods = require('@data/vcvModules')
 
 @customElement('vcv-module')
@@ -10,10 +10,8 @@ export class VcvModule extends RootLitElement {
     @property()
     mod = { src: '', title: '', features: [], w:0, h:0 }
 
-    origin = ""
     constructor() {
         super()
-        origin = window.location.origin
         this.over = this.mod.title == "Strum" ? 1 : 0
     }
 
@@ -28,12 +26,12 @@ export class VcvModule extends RootLitElement {
     </div>`
 
     render() {
-        return cache(html`
-        <img src="${this.origin}/icons/caret--down.svg" alt="\\\/" class="relative w-8 h-8 mx-auto pb-4 transition duration-300 ${this.c()}">
+        return html`
+        <img src="${window.location.origin}/icons/caret--down.svg" alt="\\\/" class="relative w-8 h-8 mx-auto pb-4 transition duration-300 ${this.c()}">
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
         class="flex-row space-y-12 items-start w-60 transition duration-200 transform ${this.s()}">
             <div>
-                <img class="mx-auto py-3 px-3 border-gray-400 border ${this.b()}" src="${this.mod.src}"
+                <img alt="${this.mod.title}" class="mx-auto py-3 px-3 border-gray-400 border ${this.b()}" src="${this.mod.src}"
                 style="width: ${this.mod.w}; height:${this.mod.h};">
             </div>
             <div class="text-sm">
@@ -43,7 +41,7 @@ export class VcvModule extends RootLitElement {
                 ${this.mod.features.map(this.feature)}
             </div>
         </div>
-        `)
+        `
     }
 }
 
