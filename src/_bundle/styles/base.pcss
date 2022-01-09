@@ -1,6 +1,6 @@
 :root {
   /* w-3 */
-  --scrollbar-width: 0.764rem;
+  --scrollbar-width: 12px;
   --color-secondary-400: '#ff322c';
   --color-black: '#111111';
 }
@@ -11,6 +11,7 @@ body {
   /* scrollbar-width: var(--scrollbar-width);
   scrollbar-color: var(--color-secondary-400); */
   cursor: crosshair;
+  height: 100%;
 }
 
 img,
@@ -47,7 +48,7 @@ h1 {
   @apply bg-secondary-400;
 }
 
-.w-full-scroll{
+.w-full-scroll {
   width: calc(100% - var(--scrollbar-width));
 }
 
@@ -73,5 +74,14 @@ h1 {
 }
 
 .parallax-layer--back {
-  transform: translateZ(-400px) translateY(-100px) translateX(-300px); /* scale(1); */
+  transform: translateZ(-400px) translateY(-200px) translateX(-300px);
+}
+
+@-moz-document url-prefix() {
+  :root {
+    --scrollbar-width: 16px;
+  }
+  .parallax-layer--back {
+    transform: translateZ(-400px) translateY(200px);
+  }
 }

@@ -3,8 +3,10 @@
   "author": "Aeron Miles",
   "license": "Copyright - For Reference Only",
   "scripts": {
-    "prod": "cross-env NODE_ENV=production npm-run-all clean -p serve:*",
+    "prod": "cross-env NODE_ENV=production npm-run-all clean -s build:* -p serve:*",
     "dev": "cross-env NODE_ENV=development npm-run-all -p serve:*",
+    "build": "cross-env NODE_ENV=production npm-run-all clean -s build:*",
+    "serve": "cross-env NODE_ENV=production npm-run-all -p serve:*",
     "clean": "rm -rf dist/*; rm -rf src/_lit/es/*",
     "deploy": "cross-env NODE_ENV=production npm-run-all build:* commit",
     "commit": "cd dist && git add --all && git commit -m \"Release\" && git push && cd ../",

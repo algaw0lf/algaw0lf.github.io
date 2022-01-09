@@ -1,4 +1,4 @@
-import { customElement, property, html, RootLitElement } from './lit'
+import { customElement, property, html, RootLitElement, origin } from './lit'
 const mods = require('@data/vcvModules')
 
 @customElement('vcv-module')
@@ -8,14 +8,14 @@ export class VcvModule extends RootLitElement {
     @property()
     over = 0
     @property()
-    mod = { src: '', title: '', features: [], w:0, h:0 }
+    mod = { src: '', title: '', features: [], w: 0, h: 0 }
 
     constructor() {
         super()
         this.over = this.mod.title == "Strum" ? 1 : 0
     }
 
-    s = () => this.over || !this.focused ? "" : "scale-95 filter-grayscale-100"
+    s = () => this.over || !this.focused ? "" : "transform scale-95 filter-grayscale-100"
     c = () => this.over ? "" : "opacity-0 transform -translate-y-5"
     f = () => this.over ? 'bg-white ' : 'text-transparent transform translate-y-9'
     b = () => this.over ? "" : "border-opacity-0"
@@ -27,19 +27,21 @@ export class VcvModule extends RootLitElement {
 
     render() {
         return html`
-        <img src="${window.location.origin}/icons/caret--down.svg" alt="\\\/" class="relative w-8 h-8 mx-auto pb-4 transition duration-300 ${this.c()}">
+        <img src="${origin}/icons/caret--down.svg" alt="arrow" class="relative w-8 h-8 mx-auto pb-4 transition duration-300 ${this.c()}">
         <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-        class="flex-row space-y-12 items-start w-60 transition duration-200 transform ${this.s()}">
-            <div>
-                <img alt="${this.mod.title}" class="mx-auto py-3 px-3 border-gray-400 border ${this.b()}" src="${this.mod.src}"
-                style="width: ${this.mod.w}; height:${this.mod.h};">
-            </div>
-            <div class="text-sm">
+        class="flex-row wrap space-y-12 items-start w-60 transition duration-200 ${this.s()}">
+            <a href="#module_${this.mod.title}" class="text-sm">
+                <div>
+                    <img alt="${this.mod.title}" class="mx-auto p-3 border-gray-400 border ${this.b()}" src="${this.mod.src}"
+                    style="width: ${this.mod.w + 24.44}px; height:${this.mod.h + 24.44}px;">
+                </div>
                 <div class="my-2">
-                    <span class="text-white bg-black py-0_5 px-4 ${this.over ? "font-bold" : ""} tracking-wide8">${this.mod.title}</span>
+                    <span class="${this.over ? "font-bold" : ""} text-white tracking-wide8 bg-black py-0_5 px-4">
+                        ${this.mod.title}
+                    </span>
                 </div>
                 ${this.mod.features.map(this.feature)}
-            </div>
+            </a>
         </div>
         `
     }
@@ -55,7 +57,7 @@ export class VcvModules extends RootLitElement {
     render() {
         return html`
             <div @mouseover="${() => this.over = 1}" @mouseout="${() => this.over = 0}"
-                class="flex-col-centered drop-shadow fadeIn-1000 mx-32 gap-y-12">
+                class="flex-col-centered flex-wrap drop-shadow fadeIn-500 mx-32 gap-y-12">
                 ${mods.map(this.mod)}
             </div>
             `

@@ -9,6 +9,15 @@
     <script defer="defer" src="/assets/main.js"></script>
   </head>
 
-  {% block body %}{% endblock %}
+  <body>
+    {# <div id="overlay" class="fixed wh-100 bg-white z-50 pointer-events-none fadeOut-500"></div>
+    <div class="wrapper">
+      <aw-header></aw-header>
+      <main> #}
+        {% block body %}{% endblock %}
+      {# </main>
+    </div>
+    <aw-footer></aw-footer> #}
+  </body>
 
 </html>

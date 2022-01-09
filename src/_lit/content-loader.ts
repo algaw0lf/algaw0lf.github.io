@@ -1,4 +1,4 @@
-import { customElement, html, unsafeHTML, RootLitElement, until, property } from './lit'
+import { customElement, html, unsafeHTML, RootLitElement, until, property, origin } from './lit'
 
 @customElement('content-loader')
 export class ContentLoader extends RootLitElement {
@@ -11,7 +11,7 @@ export class ContentLoader extends RootLitElement {
         super()
     }
 
-    content = () => fetch(window.location.origin + '/' + this.path).then(r => r.text()).then(t => unsafeHTML(t))
+    content = () => fetch(origin + '/' + this.path).then(r => r.text()).then(t => unsafeHTML(t))
 
     render() {
         if (this.path === "" || this.path === undefined) return
