@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<title>Contact Me | VCV Rack Modules</title>
+<meta name="description" content="Contact Matt Waler for development, instruction, or consultation for the web.">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/favicons/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/favicons/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/favicons/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/favicons/mstile-310x310.png" />
+
+
+
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+    </style>
+    
+    <script defer="defer" src="/assets/main.js"></script>
+  </head>
+
+  <body class="">
+    <div class="wrapper">
+      <div id="overlay" class="fixed wh-100 bg-white z-50 pointer-events-none fadeOut-500"></div>
+      
+      <aw-header></aw-header>
+      <main>
+        
+
+  
+
+  <section class="text-white py-8 lg:py-16">
+    <div class="container">
+      <div class="max-w-screen-md">
+        <p class="uppercase font-bold text-gray-200 text-sm">
+          Don't be shy
+        </p>
+        <h1 class="mt-2 text-3xl md:text-4xl lg:text-6xl font-black leading-tight">
+          Let's get in touch.
+        </h1>
+        <p class="mt-4 max-w-screen-sm text-base sm:text-lg lg:text-xl text-gray-100">
+          Fill out the contact form below and I promise I will reach out as fast as I can. Thank you in advance for contacting me!
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <div class="container grid items-center md:grid-cols-2 gap-24 sections-spacing">
+    <form
+      name="contact"
+      method="post"
+      aria-label="contact form"
+      action="/?contact"
+    >
+      <input type="hidden" name="form-name" value="contact">
+      <label class="block pt-8">
+        <p class="font-bold">Name:</p>
+        <input name="name" type="text" required class="mt-2 input w-full">
+      </label>
+      <label class="block pt-8">
+        <p class="font-bold">Email:</p>
+        <input name="email" type="email" required class="mt-2 input w-full">
+      </label>
+      <label class="block pt-8">
+        <p class="font-bold">Message:</p>
+        <textarea name="message" rows="7" required class="mt-2 input w-full"></textarea>
+      </label>
+      <div class="block pt-8">
+        <button type="submit" class="button ml-auto">Submit</button>
+      </div>
+    </form>
+    <img class="hidden shadow-none md:block" src="/assets/contact.svg" alt="Contact image.">
+  </div>
+
+
+
+      </main>
+    </div>
+    <aw-footer></aw-footer>
+    
+  </body>
+
+</html>
