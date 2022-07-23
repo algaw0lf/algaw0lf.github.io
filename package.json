@@ -9,7 +9,7 @@
     "serve": "cross-env NODE_ENV=production npm-run-all -p serve:*",
     "clean": "rm -rf dist/*; rm -rf src/_lit/es/*",
     "deploy": "cross-env NODE_ENV=production npm-run-all build:* commit",
-    "commit": "git add --force dist/* && git commit -m \"Release\" && git subtree push --prefix dist origin gh-pages",
+    "commit": "git add -f dist/* && git commit -m \"Release\" && git push origin --delete gh-pages && git subtree push --prefix dist origin gh-pages",
     "build:ts": "tsc",
     "build:11ty": "eleventy --quiet",
     "build:webpack": "webpack",
