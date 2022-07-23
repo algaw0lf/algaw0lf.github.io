@@ -78,8 +78,8 @@ export class AwMain extends RootLitElement {
 
   mods = () => html`
     <aw-title title="VCV Rack Modules" tag="Lean & Mean"></aw-title>
-      <vcv-modules></vcv-modules>
-    <content-loader path=${this.content}></content-loader>`
+      <vcv-modules></vcv-modules>`
+    // <content-loader path=${this.content}></content-loader>`
 
   con = () => html`
     <aw-title title="Contact" tag="Wolves hunt in packs for a reason"></aw-title>
